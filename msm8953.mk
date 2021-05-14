@@ -338,6 +338,10 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.post_boot.sh
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # RIL
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayMi8953 \
