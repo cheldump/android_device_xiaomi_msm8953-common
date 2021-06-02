@@ -31,7 +31,6 @@ BOARD_KERNEL_CMDLINE += \
     ehci-hcd.park=3 \
     lpm_levels.sleep_disabled=1 \
     androidboot.bootdevice=7824900.sdhci \
-    earlycon=msm_hsl_uart,0x78af000 \
     loop.max_part=7 \
     androidboot.boot_devices=soc/7824900.sdhci
 
