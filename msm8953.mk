@@ -88,6 +88,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     libtinycompress
 
+PRODUCT_PACKAGES += \
+    sound_trigger.primary.msm8953
+
 # Audio configuration
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
