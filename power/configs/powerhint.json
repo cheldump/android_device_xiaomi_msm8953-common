@@ -214,15 +214,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "PMQoSCpuDmaLatency",
-      "Path": "/dev/cpu_dma_latency",
-      "Values": [
-        "67",
-        "100"
-      ],
-      "HoldFd": true
-    },
-    {
       "Name": "SchedBoost",
       "Path": "/proc/sys/kernel/sched_boost",
       "Values": [
@@ -445,12 +436,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 3500,
-      "Value": "67"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 3500,
       "Value": "0"
@@ -508,12 +493,6 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 1000,
       "Value": "2208000"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 1000,
-      "Value": "67"
     },
     {
       "PowerHint": "CAMERA_STREAMING_MID",
