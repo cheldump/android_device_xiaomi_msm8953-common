@@ -343,6 +343,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi
 
+ifneq ($(AB_OTA_UPDATER), true)
+PRODUCT_SOONG_NAMESPACES += \
+    bootable/deprecated-ota
+endif
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
