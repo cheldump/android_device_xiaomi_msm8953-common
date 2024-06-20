@@ -1,5 +1,2 @@
-# Dirac
-system_public_prop(dirac_prop)
-
 # Fingerprint
 vendor_restricted_prop(vendor_fp_prop)
