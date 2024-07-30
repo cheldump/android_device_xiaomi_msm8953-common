@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "TetheringConfigOverlay",
+    name: "TetheringConfigOverlayMi8953",
     theme: "TetheringConfigOverlay",
     sdk_version: "current",
     product_specific: true
