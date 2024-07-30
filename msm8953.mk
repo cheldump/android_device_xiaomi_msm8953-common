@@ -10,12 +10,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -252,6 +246,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayMi8953 \
+    SettingsOverlayMi8953 \
+    SystemUIOverlayMi8953 \
+    TelephonyOverlayMi8953
+
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -313,7 +316,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayTissot \
+    CarrierConfigOverlayMi8953 \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
@@ -362,7 +365,7 @@ PRODUCT_COPY_FILES += \
 
 # Tethering
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
+    TetheringConfigOverlayMi8953
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -385,9 +388,11 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wificond \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    WifiOverlayMi8953 \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
