@@ -74,9 +74,6 @@ function blob_fixup() {
         | system_ext/etc/permissions/telephonyservice.xml )
             sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
             ;;
-        system_ext/etc/permissions/embms.xml)
-            sed -i "s|/product/framework/|/system_ext/framework/|g" "${2}"
-            ;;
         system_ext/etc/permissions/qcrilhook.xml)
             sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
             ;;
