@@ -285,7 +285,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     fstab.zram \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
